@@ -1,0 +1,19 @@
+Kurze Beschreibung um ein von GIT geklontest Projekt lokal zu integrieren
+
+1.) Mit der Konsole zum gewünschten Speicherort wechseln. Unter Laragon ist dies der www Ordner.
+	Achtung! Beim Klonen wird automatisch ein Unterordner mit dem Projektnamen erzeugt.
+2.) Konsole: git clone https://github.com/DEKRAMediaGmbH/intranet
+	Es folgt eine Eingabeaufforderung für Benutzername und Passwort.
+	Unter Umständen kann unter Windows ein Fenster mit der Eingabeaufforderung aufpoppen. 
+	Die Eingabe hierüber funktionniert nicht. Danach erfolgt die Fehlermeldung und die Abfrage 
+	auf der Konsole.
+
+3.) Konsole: npm install
+4.) Konsole: composer install
+5.) .env anpassen
+	Falls nur eine .env.example existiert, einfach umbenennen. Sollten Zeilen mit # beginnen, sind 
+	dies Anzeichen dafür, dass die Zeilen garantiert geändert werden müssen.
+6.) Konsole: php artisan key:generate
+	Es wird automatisch ein Schlüssel erzeugt und in der Datei .env eingetragen
+7.) Konsole: php artisan migrate
+	Die Datenbank wird automatisch mit Tabellen befüllt. 
